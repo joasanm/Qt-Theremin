@@ -1,0 +1,43 @@
+﻿Compilación iniciada a las 17/08/2015 17:35:23.
+     1>Proyecto "C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\theremin\theremin.vcxproj" en el nodo 2 (Build destinos).
+     1>CustomBuild:
+         Rcc'ing theremin.qrc...
+         Uic'ing ventanaintro.ui...
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Ilibs\Assimp\include\assimp /Iuser\include /Iuser\include\Sound /Iuser\external\fmod_studio /Iuser\include\IO\Leap /Iuser\external\leapV2\include /I.\GeneratedFiles /I. /IC:\Qt\Qt5.5.0\5.5\msvc2012\include /I.\GeneratedFiles\Debug /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtCore /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtGui /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtOpenGL /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtWidgets /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Debug\moc_ventanaintro.cpp main.cpp ventanaintro.cpp
+         moc_ventanaintro.cpp
+         main.cpp
+         ventanaintro.cpp
+         Generando código...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Ilibs\Assimp\include\assimp /Iuser\include /Iuser\include\Sound /Iuser\external\fmod_studio /Iuser\include\IO\Leap /Iuser\external\leapV2\include /I.\GeneratedFiles /I. /IC:\Qt\Qt5.5.0\5.5\msvc2012\include /I.\GeneratedFiles\Debug /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtCore /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtGui /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtOpenGL /IC:\Qt\Qt5.5.0\5.5\msvc2012\include\QtWidgets /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\qrc_theremin.cpp
+         qrc_theremin.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\Win32\Debug\\theremin.exe" /NOLOGO /LIBPATH:"libs\Assimp\lib\assimp_release-dll_win32" /LIBPATH:user\lib\lib /LIBPATH:user\external\leapV2\x86 /LIBPATH:C:\Qt\Qt5.5.0\5.5\msvc2012\lib assimp.lib fmod_vc.lib Leap.lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\Win32\Debug\theremin.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\Win32\Debug\theremin.lib" /MACHINE:X86 /SAFESEH Debug\moc_graficos.obj
+         Debug\moc_theremin.obj
+         Debug\moc_ventanaconf.obj
+         Debug\moc_ventanaintro.obj
+         Debug\moc_ventanasobre.obj
+         Debug\qrc_theremin.obj
+         Debug\graficos.obj
+         Debug\main.obj
+         Debug\modelo.obj
+         Debug\UGKLeap.obj
+         Debug\UGKLeapGestureRecognizer.obj
+         Debug\UGKLeapGestureTreatment.obj
+         Debug\UGKSound.obj
+         Debug\UGKSoundSystem.obj
+         Debug\theremin.obj
+         Debug\ventanaconf.obj
+         Debug\ventanaintro.obj
+         Debug\ventanasobre.obj
+         theremin.vcxproj -> C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\Win32\Debug\theremin.exe
+       PostBuildEvent:
+         xcopy /yr "D:\Documents\LeapSDK\lib\x86\Leap.dll" "C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\Win32\Debug\"
+         :VCEnd
+         D:\Documents\LeapSDK\lib\x86\Leap.dll
+         1 archivo(s) copiado(s)
+     1>Compilación del proyecto terminada "C:\Users\Joan\Documents\Visual Studio 2012\Projects\SolucionQT\theremin\theremin.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:10.85

@@ -1,0 +1,13 @@
+Info,  T7008: Load modelos/theremin2.3ds
+Info,  T7008: Found a matching importer for this file format
+Info,  T7008: Import root directory is 'modelos\'
+Info,  T7008: 3DS file format version: 3
+Info,  T7008: 3DS: Generating default material
+Warn,  T7008: No hierarchy information has been found in the file. 
+Info,  T7008: Entering post processing pipeline
+Info,  T7008: Points: 0, Lines: 0, Triangles: 5, Polygons: 0 (Meshes, X = removed)
+Error, T7008: Failed to compute tangents; need UV data in channel0
+Skipping one or more lines with the same contents
+Info,  T7008: JoinVerticesProcess finished | Verts in: 9036 out: 1576 | ~82.6%
+Info,  T7008: Cache relevant are 4 meshes (3000 faces). Average output ACMR is 0.733000
+Info,  T7008: Leaving post processing pipeline

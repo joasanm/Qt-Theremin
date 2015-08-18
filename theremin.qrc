@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>Resources/iconos/info.png</file>
+    <file>Resources/iconos/exit.png</file>
+    <file>Resources/iconos/Piano.png</file>
+    <file>Resources/iconos/play.png</file>
+    <file>Resources/iconos/Sawtooth_wave.png</file>
+    <file>Resources/iconos/services.png</file>
+    <file>Resources/iconos/sine_wave.png</file>
+    <file>Resources/iconos/Square_wave.png</file>
+    <file>Resources/iconos/stop.png</file>
+    <file>Resources/iconos/Theremin.png</file>
+    <file>Resources/iconos/Triangle_wave.png</file>
+    <file>Resources/iconos/tune.png</file>
+    <file>Resources/introduccion.png</file>
+  </qresource>
+</RCC>

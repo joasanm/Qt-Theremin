@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>thereminClass</class>
+ <widget class="QMainWindow" name="thereminClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>632</width>
+    <height>454</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Theremin</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="theremin.qrc">
+    <normaloff>:/pic/Resources/iconos/Theremin.png</normaloff>:/pic/Resources/iconos/Theremin.png</iconset>
+  </property>
+  <widget class="graficos" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>632</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPlay"/>
+   <addaction name="actionStop"/>
+   <addaction name="separator"/>
+   <addaction name="actionSinus"/>
+   <addaction name="actionQuad"/>
+   <addaction name="actionSaw"/>
+   <addaction name="actionTriangle"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="theremin.qrc">
+     <normaloff>:/pic/Resources/iconos/play.png</normaloff>:/pic/Resources/iconos/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play sound</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="theremin.qrc">
+     <normaloff>:/pic/Resources/iconos/stop.png</normaloff>:/pic/Resources/iconos/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop sound</string>
+   </property>
+  </action>
+  <action name="actionSinus">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/iconos/sine_wave.png</normaloff>Resources/iconos/sine_wave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sinus form</string>
+   </property>
+  </action>
+  <action name="actionQuad">
+   <property name="icon">
+    <iconset resource="theremin.qrc">
+     <normaloff>:/pic/Resources/iconos/Square_wave.png</normaloff>:/pic/Resources/iconos/Square_wave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quadratic form</string>
+   </property>
+  </action>
+  <action name="actionSaw">
+   <property name="icon">
+    <iconset resource="theremin.qrc">
+     <normaloff>:/pic/Resources/iconos/Sawtooth_wave.png</normaloff>:/pic/Resources/iconos/Sawtooth_wave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Saw tooth form</string>
+   </property>
+  </action>
+  <action name="actionTriangle">
+   <property name="icon">
+    <iconset resource="theremin.qrc">
+     <normaloff>:/pic/Resources/iconos/Triangle_wave.png</normaloff>:/pic/Resources/iconos/Triangle_wave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Triangle form</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>graficos</class>
+   <extends>QWidget</extends>
+   <header>graficos.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="theremin.qrc"/>
+ </resources>
+ <connections/>
+</ui>
