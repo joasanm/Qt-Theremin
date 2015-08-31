@@ -41,6 +41,7 @@ public:
         if (thereminClass->objectName().isEmpty())
             thereminClass->setObjectName(QStringLiteral("thereminClass"));
         thereminClass->resize(632, 454);
+        thereminClass->setFocusPolicy(Qt::NoFocus);
         QIcon icon;
         icon.addFile(QStringLiteral(":/pic/Resources/iconos/Theremin.png"), QSize(), QIcon::Normal, QIcon::Off);
         thereminClass->setWindowIcon(icon);
@@ -103,13 +104,13 @@ public:
 
     void retranslateUi(QMainWindow *thereminClass)
     {
-        thereminClass->setWindowTitle(QApplication::translate("thereminClass", "Theremin", 0));
-        actionPlay->setText(QApplication::translate("thereminClass", "Play sound", 0));
-        actionStop->setText(QApplication::translate("thereminClass", "Stop sound", 0));
-        actionSinus->setText(QApplication::translate("thereminClass", "Sinus form", 0));
-        actionQuad->setText(QApplication::translate("thereminClass", "Quadratic form", 0));
-        actionSaw->setText(QApplication::translate("thereminClass", "Saw tooth form", 0));
-        actionTriangle->setText(QApplication::translate("thereminClass", "Triangle form", 0));
+        thereminClass->setWindowTitle(QApplication::translate("thereminClass", "Theremin Digital", 0));
+        actionPlay->setText(QApplication::translate("thereminClass", "Activar sonido", 0));
+        actionStop->setText(QApplication::translate("thereminClass", "Detener sonido", 0));
+        actionSinus->setText(QApplication::translate("thereminClass", "Onda sinusoidal", 0));
+        actionQuad->setText(QApplication::translate("thereminClass", "Onda cuadrada", 0));
+        actionSaw->setText(QApplication::translate("thereminClass", "Onda dientes de sierra", 0));
+        actionTriangle->setText(QApplication::translate("thereminClass", "Onda triangular", 0));
     } // retranslateUi
 
 };

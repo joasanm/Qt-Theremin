@@ -15,7 +15,7 @@ public:
 	ventanaIntro(QWidget *parent = 0);
 	~ventanaIntro();
 	theremin* t;
-	ventanaSobre* s;
+	//ventanaSobre* s;
 
 private:
 	Ui::ventanaIntro ui;

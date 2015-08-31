@@ -14,7 +14,7 @@ public:
 	explicit theremin(QWidget *parent = 0);
 	~theremin();
 	Ui::thereminClass ui;
-	ventanaSobre* s;
+	//ventanaSobre* s;
 
 private:
 	void createActions();

@@ -61,7 +61,7 @@ void ventanaSobre::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
 }
 
 const QMetaObject ventanaSobre::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_ventanaSobre.data,
+    { &QDialog::staticMetaObject, qt_meta_stringdata_ventanaSobre.data,
       qt_meta_data_ventanaSobre,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
@@ -78,12 +78,12 @@ void *ventanaSobre::qt_metacast(const char *_clname)
         return static_cast<void*>(const_cast< ventanaSobre*>(this));
     if (!strcmp(_clname, "Ui::ventanaSobre"))
         return static_cast< Ui::ventanaSobre*>(const_cast< ventanaSobre*>(this));
-    return QWidget::qt_metacast(_clname);
+    return QDialog::qt_metacast(_clname);
 }
 
 int ventanaSobre::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;

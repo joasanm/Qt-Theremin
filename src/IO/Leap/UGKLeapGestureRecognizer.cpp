@@ -87,7 +87,7 @@ void CGestureRecognizer::onFrame(const Controller& controller) {
 	#ifdef UGKLEAP_V2
 
 		int j = 0;
-		float relNota = pow(2,0.08333333);
+		float relNota = pow(2,0.083333333);
 		float mejor = 1000;
 		float mejorVol = 1000;
 		int nada = -1000;
@@ -103,6 +103,8 @@ void CGestureRecognizer::onFrame(const Controller& controller) {
 			//anchuraPalmas[i] = hands[i].palmWidth();
 			UGKdireccionMano[i] = hands[i].basis();
 
+			//calcular distancia de la palma de la mano a la antena de volumen
+
 			float distVol=UGKpalma[i].y;
 
 			if((UGKpalma[i].x/50)<-3 && (UGKpalma[i].x/50)>-7 && distVol<=mejorVol) mejorVol=distVol;
@@ -114,8 +116,16 @@ void CGestureRecognizer::onFrame(const Controller& controller) {
 					Bone bone = finger.bone(static_cast<Leap::Bone::Type>(b));
 					UGKhandsGl[i*20+f*4+b]=bone.nextJoint();
 
+					//calcular la distancia entre un punto de flexion o el centro del hueso y la antena de tonalidad
+
 					if((UGKhandsGl[i*20+f*4+b].y/50)>2 && (UGKhandsGl[i*20+f*4+b].y/50)<6.5){
 						float dist = sqrt(pow(4.125-(UGKhandsGl[i*20+f*4+b].x/50),2)+pow((-0.75)-(UGKhandsGl[i*20+f*4+b].z/50),2));
+						if(dist<=mejor) mejor=dist;
+					}
+
+					Vector bonePosition = bone.center();
+					if((bonePosition.y/50)>2 && (bonePosition.y/50)<6.5){
+						float dist = sqrt(pow(4.125-(bonePosition.x/50),2)+pow((-0.75)-(bonePosition.z/50),2));
 						if(dist<=mejor) mejor=dist;
 					}
 
@@ -136,16 +146,19 @@ void CGestureRecognizer::onFrame(const Controller& controller) {
 		for(int i=UGKnumManos*20; i<40; i++) UGKlongitudHuesos[i] = 0;
 		for(int i=UGKnumManos*20; i<40; i++) UGKanchuraHuesos[i] = 0;
 
-		if(mejor<=0.1) freq=13.75*pow(relNota,12*(maxOct+2)+3); //se supone que al tocar la antena del theremin, se produce una frecuencia de sonido muy alta
+		if(mejor<=0.15) freq=13.75*pow(relNota,12*(maxOct+1)+3); //se supone que al tocar la antena del theremin, se produce una frecuencia de sonido muy alta
 		else if(mejor<=5){
-			float distancia = 12*maxOct+5;
+			float distancia;
+			if (maxOct==1) distancia = 15;
+			else if(maxOct>1 && maxOct<=3) distancia = 12*maxOct+4;
+			else if(maxOct>3 && maxOct<=5) distancia = 12*maxOct+5;
+			else distancia = 12*maxOct+6;
 			freq=13.75*pow(relNota,(distancia)-(mejor*distancia/5));
-			//freq=4000*(1-mejor/5);
 		}
 		else freq=0;
 
-		if(mejorVol>=150 && mejorVol<=250) volumen = ((float)maxVol/100)*((mejorVol-150)/100);
-		else if(mejorVol<150) volumen = 0;
+		if(mejorVol>=200 && mejorVol<=250) volumen = ((float)maxVol/100)*(((mejorVol-200)*2)/100);
+		else if(mejorVol<200) volumen = 0;
 		else volumen = (float)maxVol/100;
 
 	#elif defined(UGKLEAP_V1)

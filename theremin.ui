@@ -10,8 +10,11 @@
     <height>454</height>
    </rect>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
   <property name="windowTitle">
-   <string>Theremin</string>
+   <string>Theremin Digital</string>
   </property>
   <property name="windowIcon">
    <iconset resource="theremin.qrc">
@@ -50,7 +53,7 @@
      <normaloff>:/pic/Resources/iconos/play.png</normaloff>:/pic/Resources/iconos/play.png</iconset>
    </property>
    <property name="text">
-    <string>Play sound</string>
+    <string>Activar sonido</string>
    </property>
   </action>
   <action name="actionStop">
@@ -59,7 +62,7 @@
      <normaloff>:/pic/Resources/iconos/stop.png</normaloff>:/pic/Resources/iconos/stop.png</iconset>
    </property>
    <property name="text">
-    <string>Stop sound</string>
+    <string>Detener sonido</string>
    </property>
   </action>
   <action name="actionSinus">
@@ -68,7 +71,7 @@
      <normaloff>Resources/iconos/sine_wave.png</normaloff>Resources/iconos/sine_wave.png</iconset>
    </property>
    <property name="text">
-    <string>Sinus form</string>
+    <string>Onda sinusoidal</string>
    </property>
   </action>
   <action name="actionQuad">
@@ -77,7 +80,7 @@
      <normaloff>:/pic/Resources/iconos/Square_wave.png</normaloff>:/pic/Resources/iconos/Square_wave.png</iconset>
    </property>
    <property name="text">
-    <string>Quadratic form</string>
+    <string>Onda cuadrada</string>
    </property>
   </action>
   <action name="actionSaw">
@@ -86,7 +89,7 @@
      <normaloff>:/pic/Resources/iconos/Sawtooth_wave.png</normaloff>:/pic/Resources/iconos/Sawtooth_wave.png</iconset>
    </property>
    <property name="text">
-    <string>Saw tooth form</string>
+    <string>Onda dientes de sierra</string>
    </property>
   </action>
   <action name="actionTriangle">
@@ -95,7 +98,7 @@
      <normaloff>:/pic/Resources/iconos/Triangle_wave.png</normaloff>:/pic/Resources/iconos/Triangle_wave.png</iconset>
    </property>
    <property name="text">
-    <string>Triangle form</string>
+    <string>Onda triangular</string>
    </property>
   </action>
  </widget>

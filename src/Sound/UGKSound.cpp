@@ -243,7 +243,8 @@ void CSound::Play()
 		if (!channel){
 			result = channel->stop();
 			result = sys->playDSP(dsp, 0, true, &channel);
-			result = channel->setVolume(0.5f);
+			result = channel->setVolume(0);
+			adsr(0, -1, 0.4, 5000, 5000, 50000, 30000);
 			switch(tecla){
 			case 's':
 				result = dsp->setParameterInt(FMOD_DSP_OSCILLATOR_TYPE, 0);
@@ -278,6 +279,46 @@ void CSound::Play()
 	
 		if(channel) return 1;
 		else return 0;
+	}
+
+	//metodo para diseñar un sistema adsr a partir del volumen de las dos primeras fases y el numero de samples que deben durar cada fase
+	void CSound::adsr(float vinit, float va, float vd, float ta, float td, float ts, float tr){
+
+		if(va>0 && vd>0 && vd<va && ta>0 && td>0 && tr>0){
+			float vol=vinit;
+			unsigned long long parentclock;
+			result = channel->getDSPClock(NULL, &parentclock);
+
+			//attack
+
+			float t_attack = parentclock+ta;
+			float incVol = va/(ta/500);
+			for(float i = parentclock; i <= t_attack; i=i+500){
+				result = channel->addFadePoint(i, vol);
+				vol = vol+incVol;
+			}
+
+			//decay
+
+			float t_decay = t_attack+td;
+			incVol = (va-vd)/(td/500);
+			for(float i = t_attack; i <= t_decay; i=i+500){
+				result = channel->addFadePoint(i, vol);
+				vol = vol-incVol;
+			}
+
+			//sustain-release
+
+			float t_release = t_decay+ts+tr;
+			incVol = vd/(tr/500);
+			for(float i = t_decay+ts; i <= t_release; i=i+500){
+				result = channel->addFadePoint(i, vol);
+				vol = vol-incVol;
+			}
+
+			//silenciar el sonido al final por si acaso
+			result = channel->addFadePoint(t_release+1, 0);
+		}
 	}
 #endif
 

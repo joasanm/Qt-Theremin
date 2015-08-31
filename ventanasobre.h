@@ -1,10 +1,10 @@
 #ifndef VENTANASOBRE_H
 #define VENTANASOBRE_H
 
-#include <QWidget>
+#include <QDialog>
 #include "ui_ventanasobre.h"
 
-class ventanaSobre : public QWidget, public Ui::ventanaSobre
+class ventanaSobre : public QDialog, public Ui::ventanaSobre
 {
 	Q_OBJECT
 

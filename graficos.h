@@ -32,7 +32,7 @@ private:
 	void dibujarManos();
 	void dibujarPiano();
 	void textodisplay();
-	int modoAfinado(float n[],int i, int l, float f);
+	//int modoAfinado(float n[],int i, int l, float f);
 	int search(float n[],int i, int l, float f);
 	void idle();
 
@@ -45,9 +45,7 @@ private:
 
 	char texto[4][80];				//matriz con la informacion que se muestra en pantalla
 	int filas;						//valor del numero de filas de la matriz texto
-
 	float relacion;					//valor con la relacion entre la tasa de muestreo y la frecuencia de la nota A3
-	
 	int nota;						//valor que contiene la posicion del array de frecuencias/notas
 
 };

@@ -27,9 +27,8 @@ void ventanaIntro::on_startButton_clicked(){
 //metodo referente al uso del boton "acerca de"
 void ventanaIntro::on_aboutButton_clicked(){
 	
-	s = new ventanaSobre();
-	s->activateWindow();
-	s->show();
+	ventanaSobre s(this);
+	s.exec();
 }
 
 //metodo referente al uso del boton "configuracion"

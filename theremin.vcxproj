@@ -38,8 +38,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>libs\OpenGL\GLUT\glut-3.7.6-bin;$(IncludePath)</IncludePath>
-    <LibraryPath>libs\OpenGL\GLUT\glut-3.7.6-bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Joan\Documents\Visual Studio 2012\Projects\OpenGL\GLUT\glut-3.7.6-bin;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Joan\Documents\Visual Studio 2012\Projects\OpenGL\GLUT\glut-3.7.6-bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
@@ -61,7 +61,7 @@
       <AdditionalDependencies>assimp.lib;fmod_vc.lib;Leap.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(LEAP_SDK)\lib\x86\Leap.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /yr "user\lib\external\leapV2\Leap.dll" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

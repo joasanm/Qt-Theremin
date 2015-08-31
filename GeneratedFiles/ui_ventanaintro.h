@@ -44,6 +44,13 @@ public:
             ventanaIntro->setObjectName(QStringLiteral("ventanaIntro"));
         ventanaIntro->setWindowModality(Qt::NonModal);
         ventanaIntro->resize(685, 471);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ventanaIntro->sizePolicy().hasHeightForWidth());
+        ventanaIntro->setSizePolicy(sizePolicy);
+        ventanaIntro->setMinimumSize(QSize(685, 471));
+        ventanaIntro->setMaximumSize(QSize(685, 471));
         QIcon icon;
         icon.addFile(QStringLiteral(":/pic/Resources/iconos/Theremin.png"), QSize(), QIcon::Normal, QIcon::Off);
         ventanaIntro->setWindowIcon(icon);
@@ -110,7 +117,7 @@ public:
 
     void retranslateUi(QWidget *ventanaIntro)
     {
-        ventanaIntro->setWindowTitle(QApplication::translate("ventanaIntro", "Theremin", 0));
+        ventanaIntro->setWindowTitle(QApplication::translate("ventanaIntro", "Theremin Digital", 0));
         startButton->setText(QApplication::translate("ventanaIntro", "Empezar", 0));
         confButton->setText(QApplication::translate("ventanaIntro", "Configuraci\303\263n", 0));
         aboutButton->setText(QApplication::translate("ventanaIntro", "Acerca de", 0));

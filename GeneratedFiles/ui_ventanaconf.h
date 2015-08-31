@@ -59,6 +59,14 @@ public:
         if (ventanaConf->objectName().isEmpty())
             ventanaConf->setObjectName(QStringLiteral("ventanaConf"));
         ventanaConf->resize(513, 306);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ventanaConf->sizePolicy().hasHeightForWidth());
+        ventanaConf->setSizePolicy(sizePolicy);
+        ventanaConf->setMinimumSize(QSize(513, 306));
+        ventanaConf->setMaximumSize(QSize(513, 306));
+        ventanaConf->setFocusPolicy(Qt::StrongFocus);
         QIcon icon;
         icon.addFile(QStringLiteral(":/pic/Resources/iconos/services.png"), QSize(), QIcon::Normal, QIcon::Off);
         ventanaConf->setWindowIcon(icon);

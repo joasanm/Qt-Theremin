@@ -14,10 +14,6 @@
 
 // the global Assimp scene object
 
-
-// current rotation angle
-//static float angle = 0.f;
-
 #define aisgl_min(x,y) (x<y?x:y)
 #define aisgl_max(x,y) (y>x?y:x)
 
@@ -143,12 +139,12 @@ void modelo::apply_material(const struct aiMaterial *mtl)
 	else
 		fill_mode = GL_FILL;
 	glPolygonMode(GL_FRONT_AND_BACK, fill_mode);
-
+	/*
 	max = 1;
 	if((AI_SUCCESS == aiGetMaterialIntegerArray(mtl, AI_MATKEY_TWOSIDED, &two_sided, &max)) && two_sided)
 		glDisable(GL_CULL_FACE);
 	else 
-		glEnable(GL_CULL_FACE);
+		glEnable(GL_CULL_FACE);*/
 }
 
 // ----------------------------------------------------------------------------
@@ -161,8 +157,6 @@ void modelo::recursive_render (const struct aiScene *sc, const struct aiNode* nd
 	// update transform
 	aiTransposeMatrix4(&m);
 	glPushMatrix();
-	
-	//glMultMatrixf((float*)&m);
 
 	// draw all meshes assigned to this node
 	for (; n < nd->mNumMeshes; ++n) {
@@ -250,19 +244,6 @@ void modelo::init(){
 	// models from the repository (/models-nonbsd may be missing in 
 	// some distributions so we need a fallback from /models!).
 	loadasset("modelos/theremin2.3ds");
-	/*if( 0 != loadasset( argc >= 2 ? argv[1] : "modelos/theremin2.3ds")) {
-		if( argc != 1 || (0 != loadasset( "modelos/theremin2.3ds") && 0 != loadasset( "modelos/theremin2.3ds"))) { 
-			return -1;
-		}
-	}*/
-
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);    // Uses default lighting parameters
-
-	glEnable(GL_DEPTH_TEST);
-
-	glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
-	glEnable(GL_NORMALIZE);
 
 	// XXX docs say all polygons are emitted CCW, but tests show that some aren't.
 	if(getenv("MODEL_IS_BROKEN"))  

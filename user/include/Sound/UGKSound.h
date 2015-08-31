@@ -171,6 +171,7 @@ namespace UGK
 			void activeDSPSound(char tecla);
 			void stopDSPSound();
 			int isChannel();
+			void adsr(float vinit, float va, float ta, float vd, float td, float ts, float tr);
 		#endif
 
 		void SetVolume(int vol); ///< Set new volume

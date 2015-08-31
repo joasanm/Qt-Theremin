@@ -1,7 +1,7 @@
 #include "ventanasobre.h"
 
 ventanaSobre::ventanaSobre(QWidget *parent)
-	: QWidget(parent)
+	: QDialog(parent)
 {
 	setupUi(this);
 }

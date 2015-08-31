@@ -1,5 +1,4 @@
 #include "theremin.h"
-//#include "ui_theremin.h"
 
 #include <QtWidgets>
 
@@ -185,8 +184,8 @@ void theremin::vconfig(){
 //metodo que abre la ventana "acerca de"
 void theremin::aboutButton(){
 	
-	s = new ventanaSobre();
-	s->show();
+	ventanaSobre s(this);
+	s.exec();
 }
 
 //metodo que cambia la forma de genrerar frecuencias de sonido
