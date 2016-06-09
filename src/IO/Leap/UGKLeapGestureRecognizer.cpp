@@ -1,6 +1,7 @@
 /**	
 *	Prefix: 
-*	@Author: Juan CerrÛn, CÈdric Marco
+*	@Author: Juan Cerr√≥n, C√©dric Marco
+* 		 Sancho Mart√≠nez. Joan
 *	@version: 2013-14
 **/
 
@@ -189,8 +190,8 @@ void CGestureRecognizer::onFrame(const Controller& controller) {
 			}
 
 			/* Utilizamos el movimiento circular de un dedo para saber el tipo de disparo.
-			Si es en el sentido de las agujas del reloj, ser· un disparo normal, y en el 
-			sentido contrario a las agujas del reloj, se tratar· de un lanzamiento de bomba*/
+			Si es en el sentido de las agujas del reloj, ser√° un disparo normal, y en el 
+			sentido contrario a las agujas del reloj, se tratar√° de un lanzamiento de bomba*/
 
 			if (clockwiseness == "clockwise"){ 
 				//std::cout << "DISPARA" << std::endl;
@@ -215,7 +216,7 @@ void CGestureRecognizer::onFrame(const Controller& controller) {
 				
 				}
 
-				/* Comprobamos la direcciÛn del movimiento, tendremos en cuenta el gesto si su direcciÛn
+				/* Comprobamos la direcci√≥n del movimiento, tendremos en cuenta el gesto si su direcci√≥n
 				en cualquiera de los ejes es mayor que 0.85 */
 
 				// Comprobamos el desplazamiento horizontal
