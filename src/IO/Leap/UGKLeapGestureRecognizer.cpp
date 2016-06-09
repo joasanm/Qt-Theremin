@@ -2,7 +2,7 @@
 *	Prefix: 
 *	@Author: Juan Cerrón, Cédric Marco
 * 		 Sancho Martínez. Joan
-*	@version: 2013-14
+*	@version: 2015-16
 **/
 
 #include <iostream>
