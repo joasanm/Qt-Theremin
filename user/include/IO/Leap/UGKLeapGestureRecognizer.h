@@ -1,7 +1,8 @@
 /**	Listener class to detect movements with Leap device
 *	Prefix: GR_	Gesture Recognizer
-*	@Author: Juan CerrÛn, CÈdric Marco
-*	@version: 2013-14
+*	@Author: Juan Cerr√≥n, C√©dric Marco
+* 		 Sancho Mart√≠nez, Joan
+*	@version: 2015-16
 **/
 
 // If the macro of the Leap is not defined it is declared.
